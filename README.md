@@ -1,3 +1,6 @@
+<div align="center">
+    <img src="Mass-SSH-Checker.png" alt="SSH Mass Login Tool" style="border-radius: 15px; max-width: 100%; height: auto;">
+</div>
 
 ## SSH Mass Login Tool v1.0
 
