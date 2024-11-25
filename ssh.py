@@ -45,7 +45,7 @@ def ssh_login(hostname, username, password, retries=3):
             print(Fore.GREEN + f"[+] Success: {hostname}")
             return True
         except paramiko.ssh_exception.SSHException as e:
-            print(Fore.YELLOW + f"Retry {attempt + 1}/{retries} for {hostname} due to SSHException: {e}")
+            print(Fore.YELLOW + f"[!] Retry {attempt + 1}/{retries} for {hostname} due to SSHException: {e}")
         except EOFError:
             print(Fore.RED + f"[*] Failed: {hostname} - Connection Closed By Server (EOFError)")
         except Exception as e:
