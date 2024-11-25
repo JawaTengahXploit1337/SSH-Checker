@@ -2,7 +2,7 @@
     <img src="Mass-SSH-Checker.png" alt="SSH Mass Login Tool" style="border-radius: 15px; max-width: 100%; height: auto;">
 </div>
 
-# SSH Mass Login Tool Checker v1.0
+# SSH Mass Login Checker Tool v1.0
 
 ### 🔥Deskripsi
 *Alat ini memungkinkan kamu untuk mencoba login SSH ke sejumlah server secara bersamaan menggunakan kredensial yang ada dalam file input. Setiap server yang berhasil login akan disimpan dalam file hasil `success_logins.txt`. Alat ini menggunakan threading untuk menjalankan login secara paralel, sehingga dapat menghemat waktu saat mencoba login ke banyak server.*
