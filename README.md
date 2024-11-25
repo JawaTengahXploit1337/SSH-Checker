@@ -5,13 +5,16 @@
 # SSH Mass Login Tool Checker v1.0
 
 ### 🔥Deskripsi
-Alat ini memungkinkan kamu untuk mencoba login SSH ke sejumlah server secara bersamaan menggunakan kredensial yang ada dalam file input. Setiap server yang berhasil login akan disimpan dalam file hasil `success_logins.txt`. Alat ini menggunakan threading untuk menjalankan login secara paralel, sehingga dapat menghemat waktu saat mencoba login ke banyak server.
+*Alat ini memungkinkan kamu untuk mencoba login SSH ke sejumlah server secara bersamaan menggunakan kredensial yang ada dalam file input. Setiap server yang berhasil login akan disimpan dalam file hasil `success_logins.txt`. Alat ini menggunakan threading untuk menjalankan login secara paralel, sehingga dapat menghemat waktu saat mencoba login ke banyak server.*
 
 ### ✨Fitur
 - Login SSH secara massal ke server yang ditentukan.
 - Menggunakan threading untuk menjalankan login secara paralel.
 - Hasil login yang berhasil akan disimpan dalam file `success_logins.txt`.
 - Output berwarna menggunakan `colorama` untuk membedakan status berhasil dan gagal.
+
+### 📸 Tangkapan Layar
+![SSH Checker](ssh.png)
 
 ### 🔐Persyaratan
 Untuk menjalankan alat ini, kamu perlu menginstal beberapa paket Python terlebih dahulu:
