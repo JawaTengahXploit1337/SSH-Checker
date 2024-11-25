@@ -1,20 +1,19 @@
+# Jangan Lupa Kasih Stars Yaa _< $ Kalau Mau Recode Cantumpkan Nama Author / Githubnya Juga, Hargai Karya Author
+
 import paramiko
 import threading
 import os
 from colorama import Fore, Style, init
 import platform
 
-# Inisialisasi colorama
 init(autoreset=True)
 
-# Fungsi untuk membersihkan tampilan
 def clear_screen():
     if platform.system() == "Windows":
         os.system("cls")
     else:
         os.system("clear")
 
-# Menampilkan judul alat
 def print_title():
     title = """____________________  _______________            ______              
 __  ___/_  ___/__  / / /_  ____/__  /_______________  /______________
@@ -25,7 +24,6 @@ ____/ /____/ /_  __  / / /___  _  / / /  __/ /__ _  ,<  /  __/  /
 """
     print(Fore.CYAN + title)
 
-# Membaca file input
 def read_hosts(file_path):
     with open(file_path, 'r') as file:
         lines = file.readlines()
@@ -38,7 +36,6 @@ def read_hosts(file_path):
             print(Fore.RED + f"Invalid Line Format Dek (skipping): {line.strip()}")
     return hosts
 
-# Fungsi untuk mencoba login SSH dengan mekanisme retry
 def ssh_login(hostname, username, password, retries=3):
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -58,14 +55,12 @@ def ssh_login(hostname, username, password, retries=3):
             client.close()
     return False
 
-# Fungsi untuk memproses login dan menyimpan hasil
 def process_host(host):
     hostname, username, password = host
     if ssh_login(hostname, username, password):
         with open("results/success_logins.txt", "a") as f:
             f.write(f"{hostname}|{username}|{password}\n")
 
-# Fungsi utama untuk mengelola threading
 def main(file_path, num_threads):
     if not os.path.exists("results"):
         os.makedirs("results")
@@ -84,7 +79,7 @@ def main(file_path, num_threads):
         thread.join()
 
 if __name__ == "__main__":
-    clear_screen()  # Bersihkan tampilan layar saat alat dimulai
+    clear_screen()  
     print_title()
     file_path = input("[$] Enter Your File .txt List (file.txt): ")
     num_threads = int(input("[$] Enter The NUMBER Of Threads: "))
